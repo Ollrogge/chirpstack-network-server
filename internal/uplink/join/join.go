@@ -123,6 +123,10 @@ func (ctx *joinContext) setContextFromJoinRequestPHYPayload() error {
 	}
 	ctx.JoinRequestPayload = jrPL
 
+	log.WithFields(log.Fields{
+		"join request payload": jrPL,
+	}).Info("DID NS RECEIVE DATA ?: ")
+
 	return nil
 }
 
